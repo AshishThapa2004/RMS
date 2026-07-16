@@ -25,7 +25,7 @@ return new class extends Migration
                     table:'menuitems',
                     column:'menuitem_id'
                 )
-                ->nullOnDelete;
+                ->nullOnDelete();
             $table->string('item_name_snapshot', 100);
             $table->unsignedInteger('quantity');
             $table->decimal('unit_price', 10, 2);
