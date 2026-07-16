@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('restauranttables', function (Blueprint $table) {
             $table->id('table_id');
             $table->string('table_no', 10);
-            $table->integer('capacity');
-            $table->enum('status', ['available','occupied','reserved']);
-            $table->timestamps();
+            $table->unsignedInteger('capacity');
+            $table->enum('status', ['available','occupied','reserved'])->default('available');
         });
     }
 

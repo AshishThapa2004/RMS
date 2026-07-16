@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('menuitems', function (Blueprint $table) {
-            $table->id('menuitems_id');
-            $table->enum('category',['food','drinks']);
-            $table->string('item_name', 100);
-            $table->text('description');
-            $table->decimal('price', 10, 2);
+        Schema::create('qrcodes', function (Blueprint $table) {
+            $table->id('qrcode_id');
+            $table->string('payment_name', 50);
+            $table->string('qr_image_name');
+            $table->string('account_name', 100);
+            $table->string('account_number', 100);
         });
     }
 
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('menuitems');
+        Schema::dropIfExists('qrcodes');
     }
 };
