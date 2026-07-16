@@ -19,11 +19,11 @@ return new class extends Migration
                     column:'order_id'
                 )
                 ->cascadeOnDelete();
-            $table->foreignId('menuitems_id')
+            $table->foreignId('menuitem_id')
                 ->nullable()
                 ->constrained(
                     table:'menuitems',
-                    column:'menuitems_id'
+                    column:'menuitem_id'
                 )
                 ->nullOnDelete;
             $table->string('item_name_snapshot', 100);
