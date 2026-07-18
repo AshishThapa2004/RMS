@@ -20,4 +20,13 @@ class OrderItem extends Model
         'special_note',
     ];
 
+    public function order()
+    {
+        return $this->belongsTo(Order::class, 'order_id', 'order_id');
+    }
+
+    public function menuitem()
+    {
+        return $this->belongsTo(MenuItem::class, 'menuitem_id', 'menuitem_id');
+    }
 }

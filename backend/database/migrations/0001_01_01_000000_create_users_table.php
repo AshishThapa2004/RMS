@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('password', 100);
             $table->enum('role', ['admin','worker','kitchen']);
             $table->enum('status', ['active', 'inactive']);
+            $table->string('restaurant_name');
             $table->rememberToken();
             $table->timestamps();
         });

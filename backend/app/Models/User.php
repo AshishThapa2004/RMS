@@ -25,7 +25,14 @@ class User extends Authenticatable
         'password',
         'role',
         'status',
+        'restaurant_name',
     ];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class, 'user_id', 'user_id');
+    }
+
 
     /**
      * The attributes that should be hidden for serialization.

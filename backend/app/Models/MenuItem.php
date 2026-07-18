@@ -18,4 +18,9 @@ class MenuItem extends Model
     ];
 
     public $timestamps = false;
+
+    public function orderitems()
+{
+    return $this->hasMany(OrderItem::class, 'menuitem_id', 'menuitem_id');
+}
 }
