@@ -2,8 +2,8 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import { LandingPage } from "./components/LandingPage";
-import { SignUp } from "./components/SingUp";
+import { LandingPage } from "./pages/LandingPage";
+import { SignIn } from "./pages/SignIn";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './App.css'
 
@@ -16,7 +16,7 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/signup" element={<SignUp />} />
+      <Route path="/signin" element={<SignIn />} />
     </Routes>
     
      

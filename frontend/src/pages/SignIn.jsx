@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
 
-export const SignUp = () =>{
+export const SignIn = () =>{
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
@@ -37,7 +37,7 @@ export const SignUp = () =>{
       {/* Card */}
       <div className="bg-white rounded-2xl shadow-sm w-full max-w-md px-8 py-10">
         <h2 className="text-2xl font-bold text-center text-gray-900">
-          Sign <span className="text-[#F9A304]">Up</span>
+          Sign <span className="text-[#F9A304]">In</span>
         </h2>
         <p className="text-center text-sm text-gray-600 mt-1">
           Log in to your <span className="text-[#F9A304]">account</span>
