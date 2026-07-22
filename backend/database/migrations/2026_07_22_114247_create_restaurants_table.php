@@ -21,7 +21,7 @@ return new class extends Migration
                 ->cascadeOnDelete();
             $table->string('restaurant_name', 100);
             $table->string('address', 100);
-            $table->string('phone_no', 100);
+            $table->string('phone_no', 15);
             $table->string('logo_name');
             $table->timestamps();
         });
