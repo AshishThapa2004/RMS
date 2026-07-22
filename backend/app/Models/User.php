@@ -25,10 +25,14 @@ class User extends Authenticatable
         'password',
         'role',
         'status',
-        'restaurant_name',
     ];
 
-    public function order()
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'user_id', 'user_id');
+    }
+
+    public function restaurants()
     {
         return $this->hasMany(Order::class, 'user_id', 'user_id');
     }
