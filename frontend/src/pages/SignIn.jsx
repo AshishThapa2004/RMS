@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+ import logo from "../assets/images/logo.jpeg";
 
 export const SignIn = () =>{
   const [showPassword, setShowPassword] = useState(false);
@@ -22,20 +23,13 @@ export const SignIn = () =>{
   };
 
   return (
+
     <div className="min-h-screen bg-[#ececec] flex flex-col items-center justify-center px-4">
       {/* Logo */}
-      <h1
-        className="text-5xl font-extrabold tracking-wide mb-6"
-        style={{
-          WebkitTextStroke: "1px #f97316",
-          color: "#d1d5db",
-        }}
-      >
-        RMS
-      </h1>
-
+     <img src={logo} alt="RMS - Restaurant Management System" className="h-10 w-auto object-contain scale-200"></img>
+    
       {/* Card */}
-      <div className="bg-white rounded-2xl shadow-sm w-full max-w-md px-8 py-10">
+      <div className="bg-white rounded-2xl shadow-sm w-full max-w-md px-8 py-10 mt-10">
         <h2 className="text-2xl font-bold text-center text-gray-900">
           Sign <span className="text-[#F9A304]">In</span>
         </h2>
@@ -75,27 +69,7 @@ export const SignIn = () =>{
             </button>
           </div>
 
-          <div className="relative">
-            <input
-              type={showConfirmPassword ? "text" : "password"}
-              name="confirmPassword"
-              placeholder="Confirm Password"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-full border border-gray-300 bg-gray-50 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#F9A304] pr-10"
-            />
-            <button
-              type="button"
-              onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-            >
-              {showConfirmPassword ? (
-                <EyeOff className="w-4 h-4" />
-              ) : (
-                <Eye className="w-4 h-4" />
-              )}
-            </button>
-          </div>
+          
 
           <button
             type="submit"
