@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('phone', 15)->unique();
             $table->string('password', 100);
             $table->enum('role', ['admin','worker','kitchen']);
-            $table->enum('status', ['active', 'inactive']);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->rememberToken();
             $table->timestamps();
         });
