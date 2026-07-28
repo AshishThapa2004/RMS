@@ -1,6 +1,7 @@
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
- import logo from "../assets/images/logo.jpeg";
+ import logo from "../assets/images/logo.png";
 
 export const SignIn = () =>{
   const [showPassword, setShowPassword] = useState(false);
@@ -24,9 +25,9 @@ export const SignIn = () =>{
 
   return (
 
-    <div className="min-h-screen bg-[#ececec] flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-[#ececec] flex flex-col items-center justify-center px-8 py-10 sm:py-14">
       {/* Logo */}
-     <img src={logo} alt="RMS - Restaurant Management System" className="h-10 w-auto object-contain scale-200"></img>
+     <img src={logo} alt="RMS - Restaurant Management System" className="h-10 w-auto object-contain scale-350"></img>
     
       {/* Card */}
       <div className="bg-white rounded-2xl shadow-sm w-full max-w-md px-8 py-10 mt-10">
@@ -81,9 +82,12 @@ export const SignIn = () =>{
 
         <p className="text-center text-sm text-gray-600 mt-5">
           Don't have an account?{" "}
-          <a href="#" className="text-[#F9A304] font-medium hover:underline">
-            Sign up
-          </a>
+          <Link
+            to="/signup"
+            className="text-[#F9A304] font-medium hover:underline"
+          >
+            Sign Up
+          </Link>
         </p>
       </div>
     </div>

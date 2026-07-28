@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Restaurant extends Model
 {
     protected $table = "restaurants";
-    protected $primaryKey = "ordrestaurant_ider_id";
+    protected $primaryKey = "restaurant_id";
 
     protected $fillable = [
         'user_id',
