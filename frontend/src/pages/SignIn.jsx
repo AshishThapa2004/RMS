@@ -20,7 +20,7 @@ export const SignIn = () =>{
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    // TODO: connect to your signup API
+
   };
 
   return (

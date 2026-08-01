@@ -13,3 +13,15 @@ Route::get('/user', function (Request $request) {
 Route::post('/signup', [AuthController::class, 'signup']);
 
 Route::middleware('auth:sanctum')->post('/restaurantregister', [RestaurantController::class, 'register']);
+
+
+Route::post('/login', [AuthController::class, 'login']);
+
+Route::get('/test', function () {
+    return response()->json([
+        'message' => 'Backend is working!',
+        'status' => 'connected',
+        'timestamp' => now()
+    ]);
+});
+
