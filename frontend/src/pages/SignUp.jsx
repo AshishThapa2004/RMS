@@ -64,7 +64,7 @@ export const SignUp = () => {
       localStorage.setItem("token", data.token);
       console.log("Signed up:", data.user);
       alert("Signup success");
-      navigate("/");
+      navigate("/restaurantregister");
     } catch (err) {
       console.error("Signup failed:", err);
       setErrors({ general: "Something went wrong. Please check your connection." });
@@ -105,25 +105,28 @@ export const SignUp = () => {
           {errors.fullName && <p className="text-red-500 text-xs mt-1">{errors.fullName}</p>}
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Phone Number"
-              value={form.phone}
-              onChange={handleChange}
-              className={inputClasses}
-            />
-            {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
-
-            <input
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              value={form.email}
-              onChange={handleChange}
-              className={inputClasses}
-            />
-            {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+            <div>
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number"
+                value={form.phone}
+                onChange={handleChange}
+                className={inputClasses}
+              />
+              {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone}</p>}
+            </div>
+            <div>
+              <input
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                value={form.email}
+                onChange={handleChange}
+                className={inputClasses}
+              />
+              {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
+            </div> 
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

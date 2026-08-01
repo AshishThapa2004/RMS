@@ -7,6 +7,7 @@ import heroImg from './assets/hero.png'
 import { LandingPage } from "./pages/LandingPage";
 import { SignIn } from "./pages/SignIn";
 import { SignUp } from "./pages/SignUp";
+import { RestaurantRegister } from "./pages/RestaurantRegister";
 import NavBar from './components/NavBar';
 import logo from './assets/images/logo.png';
 import mbl from './assets/images/mbl.png';
@@ -21,6 +22,7 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/signin" element={<SignIn />} />
       <Route path="/signup" element={<SignUp />} />
+      <Route path="/restaurantregister" element={<RestaurantRegister />} />
       <Route path="/navbar" element={<NavBar />} />
     </Routes>
     
