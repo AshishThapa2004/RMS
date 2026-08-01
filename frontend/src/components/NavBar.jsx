@@ -7,8 +7,13 @@ export const NavBar = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+<<<<<<< HEAD
   const handleSignUp = () => {
     navigate("/signup");
+=======
+  const handleSignIn = () => {
+    navigate("/signin");
+>>>>>>> 06102841ea2b962999f61401620de325df59beed
     setIsMenuOpen(false); // Close menu after navigation
   };
 
@@ -53,7 +58,11 @@ export const NavBar = () => {
         </div>
           <div className="hidden md:flex items-center">
             <button
+<<<<<<< HEAD
               onClick={handleSignUp}
+=======
+              onClick={handleSignIn}
+>>>>>>> 06102841ea2b962999f61401620de325df59beed
               className="bg-[#F9A304] hover:bg-opacity-90 text-white font-semibold px-6 py-1.5 rounded-lg transition-colors"
             >
               Sign in
@@ -141,7 +150,11 @@ export const NavBar = () => {
           {/* Mobile Sign In Button */}
           <div className="pt-4">
             <button
+<<<<<<< HEAD
               onClick={handleSignUp}
+=======
+              onClick={handleSignIn}
+>>>>>>> 06102841ea2b962999f61401620de325df59beed
               className="w-full bg-[#F9A304] hover:bg-opacity-90 text-white font-semibold px-6 py-3 rounded-lg transition-colors text-lg"
             >
               Sign in

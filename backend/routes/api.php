@@ -9,6 +9,7 @@ Route::get('/user', function (Request $request) {
 })->middleware('auth:sanctum');
 
 Route::post('/signup', [AuthController::class, 'signup']);
+<<<<<<< HEAD
 
 Route::post('/login', [AuthController::class, 'login']);
 
@@ -19,3 +20,5 @@ Route::get('/test', function () {
         'timestamp' => now()
     ]);
 });
+=======
+>>>>>>> 06102841ea2b962999f61401620de325df59beed

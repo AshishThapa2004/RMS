@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Auth;
+=======
+>>>>>>> 06102841ea2b962999f61401620de325df59beed
 
 class AuthController extends Controller
 {
@@ -34,6 +37,7 @@ class AuthController extends Controller
             'user'  => $user,
             'token' => $token,
         ], 201);
+<<<<<<< HEAD
     }  
     
     
@@ -70,4 +74,7 @@ class AuthController extends Controller
             'message' => 'Invalid email or password'
         ], 401);
     }
+=======
+    }   
+>>>>>>> 06102841ea2b962999f61401620de325df59beed
 }
